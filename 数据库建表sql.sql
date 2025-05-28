@@ -83,3 +83,23 @@ VALUES
 	(12,100001,106,2,'rule_luck_award','1,60','兜底奖品60以内随机积分','2023-12-09 10:30:43','2023-12-09 12:56:00'),
 	(13,100001,NULL,1,'rule_weight','6000,102,103,104,105,106,107,108,109','消耗6000分，必中奖范围','2023-12-09 10:30:43','2023-12-09 12:58:21'),
 	(14,100001,NULL,1,'rule_blacklist','1','黑名单抽奖，积分兜底','2023-12-09 12:59:45','2023-12-09 13:42:23');
+
+CREATE TABLE  `award`(
+`id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+`award_id` int(8) NOT NULL COMMENT '抽奖奖品ID，内部流转使用',
+`award_key` varchar(32) NOT NULL  COMMENT '奖品对接标识 - 每一个都是一个对应的发奖策略',
+`award_config` varchar(32)  NOT NULL  COMMENT '奖品配置信息',
+`award_desc` varchar(128)  NOT NULL  COMMENT '奖品内容描述',
+`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `award` VALUES (1, 101, 'user_credit_random', '1100', '用户积分【优先透彻规则范围，如果没有则走配置】', '2023-12-09 11:07:06', '2023-12-09 11:21:31');
+INSERT INTO `award` VALUES (2, 102, 'openai_use_count', '5', 'OpenAI增加使用次数', '2023-12-09 11:07:06', '2023-12-09 11:12:59');
+INSERT INTO `award` VALUES (3, 103, 'openai_use_conut', '10', 'OpenAI增加使用次数', '2023-12-09 11:07:06', '2023-12-09 11:12:59');
+INSERT INTO `award` VALUES (4, 104, 'openai_use_conut', '20', 'OpenAI增加使用次数', '2023-12-09 11:07:06', '2023-12-09 11:12:58');
+INSERT INTO `award` VALUES (5, 105, 'openai_model', 'gpt-4', 'OpenAI增加模型', '2023-12-09 11:07:06', '2023-12-09 11:12:01');
+INSERT INTO `award` VALUES (6, 106, 'openai_model', 'dall-e-2', 'OpenAI增加模型', '2023-12-09 11:07:06', '2023-12-09 11:12:08');
+INSERT INTO `award` VALUES (7, 107, 'openai_model', 'dall-e-3', 'OpenAI增加模型', '2023-12-09 11:07:06', '2023-12-09 11:12:10');
+INSERT INTO `award` VALUES (8, 108, 'openai_use_conut', '100', 'OpenAI增加使用次数', '2023-12-09 11:07:06', '2023-12-09 11:12:55');
+INSERT INTO `award` VALUES (9, 109, 'openai_model', 'gpt-4,dall-e-2,dall-e-3', 'OpenAI增加模型', '2023-12-09 11:07:06', '2023-12-09 11:12:39');
