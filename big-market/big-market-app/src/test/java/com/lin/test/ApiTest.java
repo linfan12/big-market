@@ -8,9 +8,12 @@ import com.lin.infrastructure.persistent.po.Award;
 import com.lin.infrastructure.persistent.po.Strategy;
 import com.lin.infrastructure.persistent.po.StrategyAward;
 import com.lin.infrastructure.persistent.po.StrategyRule;
+import com.lin.infrastructure.persistent.redis.IRedisService;
+import com.lin.infrastructure.persistent.redis.RedissonService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RMap;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -22,53 +25,22 @@ import javax.annotation.Resource;
 public class ApiTest {
 
     @Resource
-    IAwardDao iAwardDao;
-
-    @Resource
-    IStrategyDao iStrategyDao;
-
-    @Resource
-    IStrategyAwardDao iStrategyAwardDao;
-
-    @Resource
-    IStrategyRuleDao iStrategyRuleDao;
-    @Test
-    public void test() {
-        log.info("测试完成");
-    }
+    private IRedisService redisService;
 
     @Test
-    public void testAwardDao() {
-        log.info("AwardDao测试开始");
-        for (Award award : iAwardDao.queryAwardList()) {
-            System.out.println(award);
-        }
-    }
-
-    @Test
-    public void testStrategyDao() {
-        log.info("StrategyDao测试开始");
-        for (Strategy strategy : iStrategyDao.queryStrategyList()) {
-            System.out.println(strategy);
-        }
-    }
-
-    @Test
-    public void testStrategyAwardDao() {
-        log.info("StrategyAwardDao测试开始");
-        for (StrategyAward strategyAward : iStrategyAwardDao.queryStrategyAwardList()) {
-            System.out.println(strategyAward);
-        }
-    }
-
-    @Test
-    public void testStrategyRuleDao() {
-        log.info("StrategyRuleDao测试开始");
-        for (StrategyRule strategyRule : iStrategyRuleDao.queryStrategyRuleList()) {
-            System.out.println(strategyRule);
-        }
+    public void test(){
+        RMap<Object, Object> map = redisService.getMap("strategy_id_100001");
+        map.put(1,101);
+        map.put(2,101);
+        map.put(3,101);
+        map.put(4,102);
+        map.put(5,102);
+        map.put(6,102);
+        map.put(7,103);
+        map.put(8,103);
+        map.put(9,104);
+        map.put(10,105);
+        log.info("测试结果：{}",redisService.getFromMap("strategy_id_100001",1).toString());
 
     }
-
-
 }
