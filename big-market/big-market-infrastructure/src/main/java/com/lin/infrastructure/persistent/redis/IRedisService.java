@@ -2,8 +2,11 @@ package com.lin.infrastructure.persistent.redis;
 
 import org.redisson.api.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Redis 服务
+ *
  * @author Fuzhengwei bugstack.cn @小傅哥
  */
 public interface IRedisService {
@@ -34,14 +37,6 @@ public interface IRedisService {
     <T> T getValue(String key);
 
     /**
-     * getMap方法实现
-     * @param key
-     * @param <T>
-     * @return
-     */
-    RMap<Object, Object> getMap(String key);
-
-    /**
      * 获取队列
      *
      * @param key 键
@@ -63,10 +58,25 @@ public interface IRedisService {
      * 延迟队列
      *
      * @param rBlockingQueue 加锁队列
-     * @param <T> 泛型
+     * @param <T>            泛型
      * @return 队列
      */
     <T> RDelayedQueue<T> getDelayedQueue(RBlockingQueue<T> rBlockingQueue);
+
+    /**
+     * 设置值
+     *
+     * @param key   key 键
+     * @param value 值
+     */
+    void setAtomicLong(String key, long value);
+
+    /**
+     * 获取值
+     *
+     * @param key key 键
+     */
+    Long getAtomicLong(String key);
 
     /**
      * 自增 Key 的值；1、2、3、4
@@ -151,6 +161,14 @@ public interface IRedisService {
     String getFromList(String key, int index);
 
     /**
+     * 获取Map
+     *
+     * @param key 键
+     * @return 值
+     */
+    <K, V> RMap<K, V> getMap(String key);
+
+    /**
      * 将指定的键值对添加到哈希表中
      *
      * @param key   键
@@ -166,7 +184,16 @@ public interface IRedisService {
      * @param field 字段
      * @return 值
      */
-    Object getFromMap(String key, Object field);
+    String getFromMap(String key, String field);
+
+    /**
+     * 获取哈希表中指定字段的值
+     *
+     * @param key   键
+     * @param field 字段
+     * @return 值
+     */
+    <K, V> V getFromMap(String key, K field);
 
     /**
      * 将指定的值添加到有序集合中
@@ -235,5 +262,9 @@ public interface IRedisService {
      * @return 返回结果
      */
     <T> RBloomFilter<T> getBloomFilter(String key);
+
+    Boolean setNx(String key);
+
+    Boolean setNx(String key, long expired, TimeUnit timeUnit);
 
 }

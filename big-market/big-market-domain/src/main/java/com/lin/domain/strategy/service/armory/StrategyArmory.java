@@ -21,6 +21,10 @@ public class StrategyArmory implements IStrategyArmory{
     @Resource
     private IStrategyRepository repository;
 
+    /**
+     * 根据策略id查询，把策略信息从mysql中查询出来进行处理，方便进行后续抽奖，并且装配到redis中
+     * @param strategyId
+     */
     @Override
     public void assembleLotteryStrategy(Long strategyId) {
         //1.查询策略配置
