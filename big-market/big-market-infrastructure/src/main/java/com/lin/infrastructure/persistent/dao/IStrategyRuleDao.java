@@ -11,4 +11,6 @@ import java.util.List;
 @Mapper
 public interface IStrategyRuleDao {
     public List<StrategyRule> queryStrategyRuleList();
+
+    StrategyRule queryStrategyRule(StrategyRule strategyRuleReq);
 }
