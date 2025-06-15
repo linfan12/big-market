@@ -1,7 +1,9 @@
 package com.lin.test.domain;
 
+import com.lin.domain.strategy.model.entity.RuleMatterEntity;
 import com.lin.domain.strategy.service.armory.IStrategyArmory;
 import com.lin.domain.strategy.service.armory.StrategyArmoryDispatch;
+import com.lin.domain.strategy.service.rule.impl.RuleBackListLogicFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.Scanner;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -47,5 +50,11 @@ public class StrategyArmoryTest {
         log.info("测试结果：{} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
         log.info("测试结果：{} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
         log.info("测试结果：{} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+    }
+    @Resource
+    RuleBackListLogicFilter ruleBackListLogicFilter;
+    @Test
+    public void test(){
+        ruleBackListLogicFilter.filter(new RuleMatterEntity("lin",100001L,null,"rule_blacklist"));
     }
 }

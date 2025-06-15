@@ -8,6 +8,7 @@ import com.lin.domain.strategy.service.armory.IStrategyArmory;
 import com.lin.infrastructure.persistent.dao.IStrategyAwardDao;
 import com.lin.infrastructure.persistent.dao.IStrategyDao;
 import com.lin.infrastructure.persistent.dao.IStrategyRuleDao;
+import com.lin.infrastructure.persistent.po.Award;
 import com.lin.infrastructure.persistent.po.Strategy;
 import com.lin.infrastructure.persistent.po.StrategyAward;
 import com.lin.infrastructure.persistent.po.StrategyRule;
@@ -117,6 +118,15 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleValue(strategyRuleRes.getRuleValue())
                 .ruleDesc(strategyRuleRes.getRuleDesc())
                 .build();
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel) {
+        StrategyRule strategyRule = new StrategyRule();
+        strategyRule.setStrategyId(strategyId);
+        strategyRule.setAwardId(awardId);
+        strategyRule.setRuleModel(ruleModel);
+        return strategyRuleDao.queryStrategyRuleValue(strategyRule);
     }
 
 }
