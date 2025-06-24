@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 抽奖因子实体
+ * 抽奖因子实体，perform执行的使用
  */
 @Data
 @AllArgsConstructor
@@ -17,4 +17,6 @@ public class RaffleFactorEntity {
     private String userId;
     //策略id
     private Long strategyId;
+    //奖品id
+    private Integer awardId;
 }

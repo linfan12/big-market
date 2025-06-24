@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/big-market/big-market.iml" filepath="$PROJECT_DIR$/big-market/big-market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/big-market/big-market-api/big-market-api.iml" filepath="$PROJECT_DIR$/big-market/big-market-api/big-market-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/big-market/big-market-app/big-market-app.iml" filepath="$PROJECT_DIR$/big-market/big-market-app/big-market-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/big-market/big-market-domain/big-market-domain.iml" filepath="$PROJECT_DIR$/big-market/big-market-domain/big-market-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/big-market/big-market-infrastructure/big-market-infrastructure.iml" filepath="$PROJECT_DIR$/big-market/big-market-infrastructure/big-market-infrastructure.iml" />

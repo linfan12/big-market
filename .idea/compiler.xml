@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="big-market-infrastructure" />
+        <module name="big-market-api" />
         <module name="big-market-app" />
         <module name="big-market-trigger" />
         <module name="big-market-domain" />
@@ -16,6 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="big-market" target="1.8" />
+      <module name="big-market-api" target="1.8" />
       <module name="big-market-app" target="1.8" />
       <module name="big-market-domain" target="1.8" />
       <module name="big-market-infrastructure" target="1.8" />

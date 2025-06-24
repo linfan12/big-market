@@ -26,7 +26,7 @@
     </select>
     <select id="queryStrategyRuleValue" parameterType="com.lin.infrastructure.persistent.po.StrategyRule" resultType="java.lang.String">
         select rule_value from strategy_rule
-        where strategy_id=#{strategyId} and rule_model=#{ruleModel};
+        where strategy_id=#{strategyId} and rule_model=#{ruleModel}
         <if test="awardId != null">
             and award_id = #{awardId}
         </if>

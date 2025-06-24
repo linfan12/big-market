@@ -4,6 +4,7 @@ import com.lin.domain.strategy.model.entity.StrategyAwardEntity;
 import com.lin.domain.strategy.model.entity.StrategyEntity;
 import com.lin.domain.strategy.model.entity.StrategyRuleEntity;
 import com.lin.domain.strategy.repository.IStrategyRepository;
+import com.lin.types.common.Constants;
 import com.lin.types.enums.ResponseCode;
 import com.lin.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -33,17 +34,28 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
     public boolean assembleLotteryStrategy(Long strategyId) {
         //1.查询策略配置
         List<StrategyAwardEntity>strategyAwardEntities  = repository.queryStrategyAwardList(strategyId);
+
+        // 2 缓存奖品库存【用于decr扣减库存使用】
+        for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
+            Integer awardId = strategyAward.getAwardId();
+            Integer awardCount = strategyAward.getAwardCount();
+            cacheStrategyAwardCount(strategyId, awardId, awardCount);
+        }
+
+        // 3.1 默认装配配置【全量抽奖概率】，装配所有奖品
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
-        //2.权重策略配置 - 适用于 rule-weight 权重配置
+        // 3.2 权重策略配置 - 适用于 rule_weight 权重规则配置【4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109】
         StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
         String ruleWeight = strategyEntity.getRuleWeight();
         if(ruleWeight == null) return true;
 
+        //查询权重规则配置【4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109】
         StrategyRuleEntity strategyRuleEntity = repository.queryStrategyRule(strategyId, ruleWeight);
         if(null == strategyRuleEntity){
             throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(), ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
         }
+        //【"4000:102,103,104,105": [102,103,104,105] "5000:102,103,104,105,106,107": [102,103,104,105,106,107] "6000:102,103,104,105,106,107,108,109": [102,103,104,105,106,107,108,109]】转换成map格式
         Map<String, List<Integer>> ruleWeightValueMap = strategyRuleEntity.getRuleWeightValues();
         Set<String> keys = ruleWeightValueMap.keySet();
         for (String key : keys) {
@@ -103,6 +115,17 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
 
     }
 
+    /**
+     * 缓存奖品库存到Redis
+     *
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     * @param awardCount 奖品库存
+     */
+    private void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        repository.cacheStrategyAwardCount(cacheKey, awardCount);
+    }
 
     @Override
     public Integer getRandomAwardId(Long strategyId) {
@@ -116,6 +139,12 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
         String key = String.valueOf(strategyId).concat("_").concat(ruleWeightValue);
         int rateRange = repository.getRateRange(key);
         return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(Long strategyId, Integer awardId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_KEY + strategyId + Constants.UNDERLINE + awardId;
+        return repository.subtractionAwardStock(cacheKey);
     }
 
 }

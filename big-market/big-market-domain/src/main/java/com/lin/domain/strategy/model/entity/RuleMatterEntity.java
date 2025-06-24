@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+/**
+ * 加上规则ruleModel字段，给规则过滤器使用
+ */
 public class RuleMatterEntity {
 
     /*用户id*/
