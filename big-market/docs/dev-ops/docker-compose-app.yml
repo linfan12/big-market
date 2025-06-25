@@ -37,7 +37,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - API_HOST_URL=http://127.0.0.1:8091
+      - API_HOST_URL=http://121.40.60.108:8091
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     healthcheck:
       test: [ "CMD", "wget", "--spider", "-q", "http://0.0.0.0:3000/" ]
