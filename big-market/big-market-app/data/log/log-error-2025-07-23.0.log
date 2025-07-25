@@ -1,0 +1,96 @@
+25-07-23.19:12:41.382 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.391 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.397 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.404 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.410 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.419 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.425 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.432 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.439 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.445 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.451 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.457 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.461 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.468 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.474 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.480 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.485 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.490 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.495 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:12:41.501 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:17:22.518 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:22:15.212 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=50s280ms914µs800ns).
+25-07-23.19:22:15.212 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m19s903ms403µs200ns).
+25-07-23.19:23:22.667 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m7s457ms715µs500ns).
+25-07-23.19:23:22.667 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m7s457ms688µs900ns).
+25-07-23.19:24:17.835 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=55s166ms426µs300ns).
+25-07-23.19:24:17.835 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=55s166ms427µs700ns).
+25-07-23.19:34:37.583 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=9m48s424ms879µs200ns).
+25-07-23.19:34:37.588 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=9m48s424ms853µs100ns).
+25-07-23.19:40:03.948 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=56s342ms153µs300ns).
+25-07-23.19:40:04.007 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.014 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.020 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.027 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.034 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.041 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.048 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.055 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.062 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.069 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.074 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.081 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.086 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.091 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.100 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.106 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.113 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.119 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.125 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:04.132 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:40:35.818 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=52s837ms607µs500ns).
+25-07-23.19:40:36.569 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.440 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=58s916ms439µs200ns).
+25-07-23.19:41:13.490 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.497 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.506 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.514 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.521 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.529 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.534 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.539 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.551 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.559 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.566 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.574 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.585 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.593 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.596 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.632 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.639 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.647 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.654 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:41:13.661 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:04.854 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=10m12s585ms357µs700ns).
+25-07-23.19:51:21.676 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:21.681 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.440 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.447 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.453 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.459 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.466 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.472 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.478 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.484 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.490 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.496 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.502 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.508 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.512 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.517 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.524 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.530 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.535 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.540 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.544 [main            ] WARN  RaffleOrderTest        - 活动库存不足
+25-07-23.19:51:29.550 [main            ] WARN  RaffleOrderTest        - 活动库存不足
