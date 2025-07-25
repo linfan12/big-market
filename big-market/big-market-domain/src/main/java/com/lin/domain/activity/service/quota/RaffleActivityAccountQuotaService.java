@@ -11,6 +11,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * RaffleActivityAccountQuotaService只实现聚合对象，
@@ -62,6 +63,22 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
     }
 
     @Override
+    public ActivitySkuStockKeyVO takeQueueValue(Long sku) throws InterruptedException {
+        return activityRepository.takeQueueValue(sku);
+    }
+
+    @Override
+    public void clearQueueValue(Long sku) {
+        activityRepository.clearQueueValue(sku);
+    }
+
+
+    @Override
+    public List<Long> querySkuList() {
+        return activityRepository.querySkuList();
+    }
+
+    @Override
     public void clearQueueValue() {
         activityRepository.clearQueueValue();
     }
@@ -74,5 +91,10 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
     @Override
     public void clearActivitySkuStock(Long sku) {
         activityRepository.clearActivitySkuStock(sku);
+    }
+
+    @Override
+    public Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId) {
+        return activityRepository.queryRaffleActivityAccountDayPartakeCount(activityId, userId);
     }
 }

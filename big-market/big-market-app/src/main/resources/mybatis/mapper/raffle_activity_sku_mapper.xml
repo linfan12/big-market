@@ -35,4 +35,9 @@
         where activity_id = #{activityId}
     </select>
 
+    <select id="querySkuList" resultMap="dataMap">
+        select sku
+        from raffle_activity_sku
+    </select>
+
 </mapper>

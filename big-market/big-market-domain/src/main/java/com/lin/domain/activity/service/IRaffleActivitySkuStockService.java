@@ -2,6 +2,8 @@ package com.lin.domain.activity.service;
 
 import com.lin.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
+import java.util.List;
+
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 活动sku库存处理接口
@@ -16,11 +18,16 @@ public interface IRaffleActivitySkuStockService {
      * @throws InterruptedException 异常
      */
     ActivitySkuStockKeyVO takeQueueValue() throws InterruptedException;
+    ActivitySkuStockKeyVO takeQueueValue(Long sku) throws InterruptedException;
 
     /**
      * 清空队列
      */
     void clearQueueValue();
+
+    void clearQueueValue(Long sku);
+
+    List<Long> querySkuList();
 
     /**
      * 延迟队列 + 任务趋势更新活动sku库存

@@ -29,7 +29,18 @@ public interface IActivityRepository {
 
     ActivitySkuStockKeyVO takeQueueValue();
 
+    ActivitySkuStockKeyVO takeQueueValue(Long sku);
+
     void clearQueueValue();
+
+    void clearQueueValue(Long sku);
+
+    /**
+     * 查询所有的sku
+     * @return sku编号列表
+     */
+    List<Long> querySkuList();
+
 
     void updateActivitySkuStock(Long sku);
 
@@ -46,4 +57,6 @@ public interface IActivityRepository {
     UserRaffleOrderEntity queryNoUsedRaffleOrder(PartakeRaffleActivityEntity partakeRaffleActivityEntity);
 
     List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
+
+    Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId);
 }

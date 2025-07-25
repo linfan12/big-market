@@ -101,7 +101,7 @@ public class AwardRepository implements IAwardRepository {
         }
 
         try {
-            // 发送消息【在事务外执行，如果失败还有任务补偿】
+            // 发送消息【在事务外执行，如果失败还有任务补偿】，奖品发放通知其他事务
             eventPublisher.publish(task.getTopic(), task.getMessage());
             // 更新数据库记录，task 任务表
             taskDao.updateTaskSendMessageCompleted(task);
