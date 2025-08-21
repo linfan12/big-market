@@ -1,0 +1,61 @@
+25-07-26.00:31:31.661 [main            ] INFO  Application            - Starting Application using Java 1.8.0_341 on DESKTOP-IQMPG8V with PID 29744 (D:\DevTool\Java\java_pro\ddd\big-market\big-market-app\target\classes started by lin in D:\DevTool\Java\java_pro\ddd)
+25-07-26.00:31:31.662 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-26.00:31:33.478 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-26.00:31:33.480 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-26.00:31:33.506 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+25-07-26.00:31:34.111 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-26.00:31:34.111 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+25-07-26.00:31:34.111 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+25-07-26.00:31:34.112 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+25-07-26.00:31:34.138 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+25-07-26.00:31:34.147 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-07-26.00:31:34.147 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-26.00:31:34.147 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-26.00:31:34.290 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-26.00:31:34.290 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2598 ms
+25-07-26.00:31:34.561 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-26.00:31:34.820 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-26.00:31:34.831 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-26.00:31:36.494 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-26.00:31:36.556 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-07-26.00:31:36.566 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-26.00:31:36.568 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+25-07-26.00:31:36.620 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#509a6095:0/SimpleConnection@241d1052 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 8577]
+25-07-26.00:31:36.692 [main            ] INFO  Application            - Started Application in 5.389 seconds (JVM running for 6.254)
+25-07-26.00:31:36.995 [RMI TCP Connection(3)-192.168.0.162] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-26.00:31:37.216 [RMI TCP Connection(5)-192.168.0.162] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-26.00:31:37.216 [RMI TCP Connection(5)-192.168.0.162] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-26.00:31:37.217 [RMI TCP Connection(5)-192.168.0.162] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-26.00:31:37.231 [RMI TCP Connection(3)-192.168.0.162] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-26.00:31:37.244 [RMI TCP Connection(3)-192.168.0.162] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-26.00:31:37.265 [RMI TCP Connection(3)-192.168.0.162] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-26.00:31:37.798 [http-nio-8091-exec-5] INFO  RaffleActivityController - 活动装配，数据预热，开始 activityId:100301
+25-07-26.00:31:37.812 [http-nio-8091-exec-5] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-07-26.00:31:37.839 [http-nio-8091-exec-5] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-07-26.00:31:37.925 [http-nio-8091-exec-5] INFO  RaffleActivityController - 活动装配，数据预热，完成 activityId:100301
+25-07-26.00:31:55.470 [http-nio-8091-exec-4] INFO  RaffleActivityController - 活动抽奖 userId:xiaofuge activityId:100301
+25-07-26.00:31:55.518 [http-nio-8091-exec-4] INFO  RaffleActivityController - 活动抽奖，创建订单 userId:xiaofuge activityId:100301 orderId:634711152805
+25-07-26.00:31:55.524 [http-nio-8091-exec-4] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId:xiaofuge strategyId:100006 ruleModel:rule_default awardId:101
+25-07-26.00:31:55.525 [http-nio-8091-exec-4] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 xiaofuge 100006 101 rule_default
+25-07-26.00:31:55.536 [http-nio-8091-exec-4] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:101
+25-07-26.00:31:55.539 [http-nio-8091-exec-4] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:101
+25-07-26.00:31:55.561 [http-nio-8091-exec-4] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+25-07-26.00:31:55.561 [http-nio-8091-exec-4] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 101 null
+25-07-26.00:31:55.623 [http-nio-8091-exec-4] INFO  EventPublisher         - 发送MQ消息 topic:send_award message:{"data":{"awardId":101,"awardTitle":"随机积分","userId":"xiaofuge"},"id":"61007702573","timestamp":1753461115587}
+25-07-26.00:31:55.630 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic: send_award message: {"data":{"awardId":101,"awardTitle":"随机积分","userId":"xiaofuge"},"id":"61007702573","timestamp":1753461115587}
+25-07-26.00:32:30.620 [http-nio-8091-exec-18] INFO  RaffleActivityController - 活动抽奖 userId:xiaofuge activityId:100301
+25-07-26.00:32:30.656 [http-nio-8091-exec-18] INFO  RaffleActivityController - 活动抽奖，创建订单 userId:xiaofuge activityId:100301 orderId:508428991064
+25-07-26.00:32:30.668 [http-nio-8091-exec-18] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId:xiaofuge strategyId:100006 ruleModel:rule_default awardId:105
+25-07-26.00:32:30.669 [http-nio-8091-exec-18] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 xiaofuge 100006 105 rule_default
+25-07-26.00:32:30.674 [http-nio-8091-exec-18] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:105
+25-07-26.00:32:30.677 [http-nio-8091-exec-18] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:105
+25-07-26.00:32:30.678 [http-nio-8091-exec-18] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+25-07-26.00:32:30.678 [http-nio-8091-exec-18] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 105 null
+25-07-26.00:32:30.700 [http-nio-8091-exec-18] INFO  EventPublisher         - 发送MQ消息 topic:send_award message:{"data":{"awardId":105,"awardTitle":"4等奖","userId":"xiaofuge"},"id":"55233282584","timestamp":1753461150684}
+25-07-26.00:32:30.702 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic: send_award message: {"data":{"awardId":105,"awardTitle":"4等奖","userId":"xiaofuge"},"id":"55233282584","timestamp":1753461150684}
+25-07-26.00:32:38.779 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-26.00:32:38.781 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-07-26.00:32:38.788 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-26.00:32:39.254 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-07-26.00:32:39.387 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-07-26.00:32:39.387 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped

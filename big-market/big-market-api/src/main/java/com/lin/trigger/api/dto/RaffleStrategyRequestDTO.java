@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 抽奖请求参数
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RaffleStrategyRequestDTO {
+public class RaffleStrategyRequestDTO implements Serializable {
 
     // 抽奖策略ID
     private Long strategyId;

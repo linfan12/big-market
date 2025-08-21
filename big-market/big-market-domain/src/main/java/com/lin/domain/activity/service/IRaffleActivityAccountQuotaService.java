@@ -1,8 +1,6 @@
 package com.lin.domain.activity.service;
 
-import com.lin.domain.activity.model.entity.ActivityOrderEntity;
-import com.lin.domain.activity.model.entity.ActivityShopCartEntity;
-import com.lin.domain.activity.model.entity.SkuRechargeEntity;
+import com.lin.domain.activity.model.entity.*;
 
 /**
  * 抽奖订单活动接口
@@ -22,9 +20,23 @@ public interface IRaffleActivityAccountQuotaService {
      * @param skuRechargeEntity 活动商品充值实体对象
      * @return 活动id
      */
-    String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity);
 
-    String createOrder(SkuRechargeEntity skuRechargeEntity);
+    UnpaidActivityOrderEntity createOrder(SkuRechargeEntity skuRechargeEntity);
+
+    /**
+     * 订单出货 - 积分充值
+     * @param deliveryOrderEntity 出货单实体对象
+     */
+    void updateOrder(DeliveryOrderEntity deliveryOrderEntity);
+
+    /**
+     * 查询活动账户 - 总，参与次数
+     *
+     * @param activityId 活动ID
+     * @param userId     用户ID
+     * @return 参与次数
+     */
+    Integer queryRaffleActivityAccountPartakeCount(Long activityId, String userId);
 
     /**
      * 查询活动账户 - 日，参与次数
@@ -34,4 +46,13 @@ public interface IRaffleActivityAccountQuotaService {
      * @return 参与次数
      */
     Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId);
+
+    /**
+     * 查询活动账户额度「总、月、日」
+     *
+     * @param activityId 活动ID
+     * @param userId     用户ID
+     * @return 账户实体
+     */
+    ActivityAccountEntity queryActivityAccountEntity(Long activityId, String userId);
 }

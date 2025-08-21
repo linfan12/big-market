@@ -1,0 +1,35 @@
+25-08-02.00:55:17.233 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'DCCController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.curator.framework.CuratorFramework' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-08-02.00:55:17.273 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.apache.curator.framework.CuratorFramework' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.curator.framework.CuratorFramework' in your configuration.
+
+25-08-02.00:59:26.356 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'DCCController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.curator.framework.CuratorFramework' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+25-08-02.00:59:26.382 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.apache.curator.framework.CuratorFramework' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.curator.framework.CuratorFramework' in your configuration.
+
+25-08-02.01:07:57.497 [main            ] WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+25-08-02.01:07:58.052 [main            ] WARN  ServiceConfig          -  [DUBBO] Use random available port(20880) for protocol dubbo, dubbo version: 3.0.9, current host: 192.168.0.162
+25-08-02.01:07:58.152 [main            ] WARN  MetadataUtils          -  [DUBBO] Remote Metadata Report Server is not provided or unavailable, will stop registering service definition to remote center!, dubbo version: 3.0.9, current host: 192.168.0.162

@@ -2,6 +2,7 @@ package com.lin.domain.strategy.service.raffle;
 
 import com.lin.domain.strategy.model.entity.StrategyAwardEntity;
 import com.lin.domain.strategy.model.valobj.RuleTreeVO;
+import com.lin.domain.strategy.model.valobj.RuleWeightVO;
 import com.lin.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import com.lin.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import com.lin.domain.strategy.repository.IStrategyRepository;
@@ -61,6 +62,10 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     public StrategyAwardStockKeyVO takeQueueValue() throws InterruptedException {
         return repository.takeQueueValue();
     }
+    @Override
+    public StrategyAwardStockKeyVO takeQueueValue(Long strategyId, Integer awardId) throws InterruptedException {
+        return repository.takeQueueValue(strategyId, awardId);
+    }
 
     @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
@@ -79,7 +84,23 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     }
 
     @Override
+    public List<StrategyAwardStockKeyVO> queryOpenActivityStrategyAwardList() {
+        return repository.queryOpenActivityStrategyAwardList();
+    }
+
+    @Override
     public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
         return repository.queryAwardRuleLockCount(treeIds);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+        return repository.queryAwardRuleWeight(strategyId);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeightByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return queryAwardRuleWeight(strategyId);
     }
 }

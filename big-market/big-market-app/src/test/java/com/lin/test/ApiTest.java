@@ -1,6 +1,6 @@
 package com.lin.test;
 
-import com.lin.infrastructure.persistent.redis.IRedisService;
+import com.lin.infrastructure.redis.IRedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

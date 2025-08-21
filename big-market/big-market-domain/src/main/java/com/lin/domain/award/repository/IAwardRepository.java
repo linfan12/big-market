@@ -1,5 +1,6 @@
 package com.lin.domain.award.repository;
 
+import com.lin.domain.award.model.aggregate.GiveOutPrizesAggregate;
 import com.lin.domain.award.model.aggregate.UserAwardRecordAggregate;
 
 /**
@@ -11,4 +12,9 @@ public interface IAwardRepository {
 
     void saveUserAwardRecord(UserAwardRecordAggregate userAwardRecordAggregate);
 
+    String queryAwardKey(Integer awardId);
+
+    String queryAwardConfig(Integer awardId);
+
+    void saveGiveOutPrizesAggregate(GiveOutPrizesAggregate giveOutPrizesAggregate);
 }
